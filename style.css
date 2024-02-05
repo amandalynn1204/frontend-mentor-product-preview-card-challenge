@@ -10,14 +10,8 @@ body {
 }
 
 main {
-  max-width: 650px;
+  max-width: 600px;
   margin: 150px auto;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px 0 0 12px;
 }
 
 h1 {
@@ -88,6 +82,14 @@ footer a {
   grid-template-columns: 1fr 1fr;
 }
 
+.img-container {
+  background-image: url(images/image-product-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 12px 0 0 12px;
+}
+
 .text-container {
   padding: 30px;
   background-color: hwb(0 100% 0%);
@@ -100,4 +102,25 @@ footer a {
   position: relative;
   bottom: 6px;
   left: 18px;
+}
+
+@media (max-width: 768px) {
+  main {
+    max-width: 350px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+  }
+
+  .img-container {
+    background-image: url(images/image-product-mobile.jpg);
+
+    border-radius: 12px 12px 0 0;
+  }
+
+  .text-container {
+    border-radius: 0 0 12px 12px;
+  }
 }
